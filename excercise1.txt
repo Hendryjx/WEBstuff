@@ -1,0 +1,39 @@
+
+Format Description:
+
+ATTRIBUTE   SEPARATOR
+Boolean     .
+Values      = 
+Types       |
+Parent      []
+spaces are ignored
+
+-----------------------------
+
+Data:
+
+CANDYBAR            (Parent to CHOCOLATE)
+price = 10
+forSale
+
+CHOCOLATE           (Parent to NUTS)
+price = 15
+big
+
+NUTS
+price = 20
+dark
+
+-------------------------------
+
+|CANDYBAR. price = 10. forSale[|CHOCOLATE[|NUTS. price = 20. dark]. price = 15. big]
+
+:::::::::::::::::::::::::::::::::
+
+<?xml version="1.0"?>
+
+<CANDYBAR price="10" forSale="true">
+    <CHOCOLATE price="15" big="true">
+        <NUTS> price="20" dark="true"/>
+    </CHOCOLATE>
+</CANDYBAR>
