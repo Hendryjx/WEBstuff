@@ -42,12 +42,14 @@ ul {
     margin-right: auto;
     width: 300;
     background-color: @box-color;
+    display: block;
+    
+    > * {
+        list-style-type: upper-alpha;
+        background-color: @box-color;
+    }
 }
 
-li {
-    list-style-type: upper-alpha;
-    background-color: @box-color;
-}
 
 a {
     background-color: @box-color;

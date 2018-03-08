@@ -35,8 +35,9 @@ ul {
   margin-right: auto;
   width: 300;
   background-color: brown;
+  display: block;
 }
-li {
+ul > * {
   list-style-type: upper-alpha;
   background-color: brown;
 }
