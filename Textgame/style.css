@@ -1,3 +1,20 @@
+@keyframes looparound {
+  0% {
+    padding-left: 0px;
+  }
+  25% {
+    padding-left: 25px;
+  }
+  50% {
+    padding-left: 50px;
+  }
+  75% {
+    padding-left: 25px;
+  }
+  100% {
+    padding-left: 0px;
+  }
+}
 * {
   background-color: black;
 }
@@ -16,11 +33,13 @@ header {
   padding: 10px;
 }
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+    margin-right: auto; */
   width: 300px;
   height: auto;
+  animation-name: looparound;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 p {
   text-align: center;
@@ -41,9 +60,18 @@ ul > * {
   list-style-type: upper-alpha;
   background-color: brown;
 }
+li:hover {
+  transform: skewX(30deg);
+  transition: transform 1s ease;
+}
 a {
   background-color: brown;
   color: whitesmoke;
   text-decoration-line: none;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all 1s ease;
+}
+a:hover {
+  transition: all 1s ease;
+  color: black;
 }
